@@ -7,9 +7,17 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    iskeyword = vim.opt.iskeyword:append "-",
+    scrolloff = 3,
+    showmatch = true,
+    smartcase = true,
+    updatetime = 300,
+    swapfile = false,
+    showcmd = true,
+    history = 1000,
   },
   g = {
-    mapleader = " ", -- sets vim.g.mapleader
+    mapleader = ",", -- sets vim.g.mapleader
     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
     cmp_enabled = true, -- enable completion at start
     autopairs_enabled = true, -- enable autopairs at start
