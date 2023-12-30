@@ -6,5 +6,10 @@ return {
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.utility.telescope-fzy-native-nvim" },
+  { import = "astrocommunity.colorscheme.vscode-nvim" },
+  --{ import = "astrocommunity.editing-support.multicursors-nvim" },
+  { import = "astrocommunity.editing-support.nvim-treesitter-endwise" },
+  -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
   --{ import = "astrocommunity.editing-support.chatgpt-nvim" },
+  --{ import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
 }

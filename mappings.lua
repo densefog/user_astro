@@ -3,6 +3,12 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+local utils = require "astronvim.utils"
+local get_icon = utils.get_icon
+
+--local sections = {
+--c = { desc = get_icon("Package", 1, true) .. "ChatGPT" },
+--}
 
 return {
   -- first key is the mode
@@ -67,7 +73,26 @@ return {
     ["<leader>l"] = { ":TestLast<CR>", desc = "Test Last" },
     ["<leader>v"] = { ":TestVisit<CR>", desc = "Test Visit" },
     ["<leader>h"] = { ":SlimuxShellRun mtf<CR>", desc = "Mix test failed" },
-    ["<leader>c"] = { ":SlimuxShellRun mc<CR>", desc = "Mix compile" },
+    --["<leader>c"] = { ":SlimuxShellRun mc<CR>", desc = "Mix compile" },
+
+    -- chat gpt
+    --["<leader>c"] = sections.c,
+    --["<leader>cc"] = { ":ChatGPT<CR>", desc = "ChatGPT" },
+    --["<leader>ce"] = { "<cmd>ChatGPTEditWithInstruction<CR>", desc = "Edit with instruction" },
+    --["<leader>cg"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "Grammar Correction" },
+    --["<leader>ct"] = { "<cmd>ChatGPTRun translate<CR>", desc = "Translate" },
+    --["<leader>ck"] = { "<cmd>ChatGPTRun keywords<CR>", desc = "Keywords" },
+    --["<leader>cd"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "Docstring" },
+    --["<leader>ca"] = { "<cmd>ChatGPTRun add_tests<CR>", desc = "Add Tests" },
+    --["<leader>co"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "Optimize Code" },
+    --["<leader>cs"] = { "<cmd>ChatGPTRun summarize<CR>", desc = "Summarize" },
+    --["<leader>cf"] = { "<cmd>ChatGPTRun fix_bugs<CR>", desc = "Fix Bugs" },
+    --["<leader>cx"] = { "<cmd>ChatGPTRun explain_code<CR>", desc = "Explain Code" },
+    --["<leader>cr"] = { "<cmd>ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
+    --["<leader>cl"] = {
+    --"<cmd>ChatGPTRun code_readability_analysis<CR>",
+    --desc = "Code Readability Analysis",
+    --},
 
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
@@ -95,4 +120,22 @@ return {
     ["<F1>"] = { "<ESC>" },
     ["<C-l>"] = { function() require("luasnip").expand() end, desc = "Expand snippet" },
   },
+  --v = {
+  --["<leader>c"] = sections.c,
+  --["<leader>ce"] = { "<cmd>ChatGPTEditWithInstruction<CR>", desc = "Edit with instruction" },
+  --["<leader>cg"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "Grammar Correction" },
+  --["<leader>ct"] = { "<cmd>ChatGPTRun translate<CR>", desc = "Translate" },
+  --["<leader>ck"] = { "<cmd>ChatGPTRun keywords<CR>", desc = "Keywords" },
+  --["<leader>cd"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "Docstring" },
+  --["<leader>ca"] = { "<cmd>ChatGPTRun add_tests<CR>", desc = "Add Tests" },
+  --["<leader>co"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "Optimize Code" },
+  --["<leader>cs"] = { "<cmd>ChatGPTRun summarize<CR>", desc = "Summarize" },
+  --["<leader>cf"] = { "<cmd>ChatGPTRun fix_bugs<CR>", desc = "Fix Bugs" },
+  --["<leader>cx"] = { "<cmd>ChatGPTRun explain_code<CR>", desc = "Explain Code" },
+  --["<leader>cr"] = { "<cmd>ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
+  --["<leader>cl"] = {
+  --"<cmd>ChatGPTRun code_readability_analysis<CR>",
+  --desc = "Code Readability Analysis",
+  --},
+  --},
 }
